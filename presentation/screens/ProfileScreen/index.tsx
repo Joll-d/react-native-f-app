@@ -5,11 +5,11 @@ import Field from "../../components/Field";
 import DropdownList from "../../components/DropdownList";
 import {loadWorkHistory} from "../../../domain/usecases/WorkHistoryUseCase";
 import WorkHistoryList from "../../components/WorkHistoryList";
-import WorkHistoryItem from "../../../domain/entities/WorkHistoryItem";
+import IWorkHistoryItem from "../../../domain/entities/IWorkHistoryItem";
 
 
 const ProfileScreen: React.FC = () => {
-    const [workHistory, setWorkHistory] = useState<WorkHistoryItem[]>([]);
+    const [workHistory, setWorkHistory] = useState<IWorkHistoryItem[]>([]);
 
     useEffect(() => {
         loadWorkHistory().then((data) => {

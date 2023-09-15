@@ -1,8 +1,8 @@
-interface WorkHistoryItem {
+interface IWorkHistoryItem {
     companyName: string;
     position: string;
     startDate: Date;
     endDate: Date;
 }
 
-export default WorkHistoryItem;
+export default IWorkHistoryItem;

@@ -1,7 +1,7 @@
-import WorkHistoryItem from "../entities/WorkHistoryItem";
+import IWorkHistoryItem from "../entities/IWorkHistoryItem";
 
 interface WorkHistoryRepository {
-    getWorkHistory(): Promise<WorkHistoryItem[]>;
+    getWorkHistory(): Promise<IWorkHistoryItem[]>;
 }
 
 export default WorkHistoryRepository;

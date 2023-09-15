@@ -1,6 +1,6 @@
-import WorkHistoryItem from "../../domain/entities/WorkHistoryItem";
+import IWorkHistoryItem from "../../domain/entities/IWorkHistoryItem";
 
-const fakeDB: WorkHistoryItem[] = [
+const fakeDB: IWorkHistoryItem[] = [
     {
         companyName: 'Company1',
         position: 'Position1',

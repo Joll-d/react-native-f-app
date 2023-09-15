@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import {Button, View} from 'react-native';
 import {Divider} from "@react-native-material/core";
 
-interface DropdownListProps {
+interface IDropdownListProps {
     children: React.ReactNode[] | React.ReactNode;
 }
 
-const DropdownList: React.FC<DropdownListProps> = ({ children }) => {
+const DropdownList: React.FC<IDropdownListProps> = ({ children }) => {
     const [isListVisible, setListVisible] = useState(false);
 
     const toggleList = () => {
