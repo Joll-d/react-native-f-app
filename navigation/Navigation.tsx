@@ -4,7 +4,7 @@ import React from 'react';
 import {HomeScreen} from '../presentation/screens/HomeScreen';
 import {CodesScreen} from '../presentation/screens/CodesScreen';
 import { RootStackParamList } from './types';
-import {ProfileScreen} from "../presentation/screens/ProfileScreen"; // Создайте этот файл
+import {ProfileScreen} from "../presentation/screens/ProfileScreen";
 
 const Stack = createStackNavigator<RootStackParamList>();
 

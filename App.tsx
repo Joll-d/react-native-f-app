@@ -1,5 +1,5 @@
 import React from 'react';
-import Navigation from './Navigation/Navigation';
+import Navigation from './navigation/Navigation';
 
 const App: React.FC = () => {
   return <Navigation />;

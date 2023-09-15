@@ -1,15 +1,9 @@
 import React from 'react';
 import {StyleSheet, Text, View} from 'react-native';
 import Row from "../containers/Row";
+import WorkHistoryItem from "../../domain/entities/WorkHistoryItem";
 
-interface DropdownListProps {
-    companyName: string;
-    position: string;
-    startDate: Date;
-    endDate: Date;
-}
-
-const WorkHistoryListItem: React.FC<DropdownListProps> = ({companyName, position,
+const WorkHistoryListItem: React.FC<WorkHistoryItem> = ({companyName, position,
                                                        startDate, endDate}) => {
     function formatDateToDdMmYyyy(date: Date): string {
         const day: string = String(date.getDate()).padStart(2, '0');

@@ -1,12 +1,21 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {Image, View} from 'react-native';
 import styles from "./styles";
 import Field from "../../components/Field";
 import DropdownList from "../../components/DropdownList";
-import WorkHistoryListItem from "../../components/WorkHistoryListItem";
+import {loadWorkHistory} from "../../../domain/usecases/WorkHistoryUseCase";
+import WorkHistoryList from "../../components/WorkHistoryList";
+import WorkHistoryItem from "../../../domain/entities/WorkHistoryItem";
 
 
 const ProfileScreen: React.FC = () => {
+    const [workHistory, setWorkHistory] = useState<WorkHistoryItem[]>([]);
+
+    useEffect(() => {
+        loadWorkHistory().then((data) => {
+            setWorkHistory(data);
+        });
+    }, []);
 
     return (
         <View style={styles.container}>
@@ -24,18 +33,9 @@ const ProfileScreen: React.FC = () => {
                 <Field label={'Number'} value={'0954872546'}></Field>
 
                 <DropdownList>
-                    <WorkHistoryListItem companyName={'Company'} position={'asd'}
-                                         startDate={new Date(2023, 8, 15)}
-                                         endDate={new Date(2024, 8, 15)}/>
-
-                    <Field label={'Name'} value={'Sem Santi'}></Field>
-
-                    <Field label={'Email'} value={'example@email.com'}></Field>
-
-                    <Field label={'Number'} value={'0954872546'}></Field>
+                    <WorkHistoryList workHistory={workHistory} />
                 </DropdownList>
 
-                {/* Добавьте другие поля профиля здесь */}
             </View>
         </View>
     );
