@@ -22,7 +22,7 @@ const ProfileScreen: React.FC = () => {
             <View style={styles.imageContainer}>
                 <Image
                     style={styles.image}
-                    source={require('../../../assets/adaptive-icon.png')}
+                    source={require('../../../../assets/adaptive-icon.png')}
                 />
             </View>
             <View style={styles.infoContainer}>
