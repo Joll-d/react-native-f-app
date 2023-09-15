@@ -11,14 +11,18 @@ type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 const HomeScreen: React.FC = () => {
     const navigation = useNavigation<HomeScreenNavigationProp>();
 
-    const goToOtherScreen = () => {
+    const goToCodesScreen = () => {
         navigation.navigate('Codes');
+    };
+
+    const goToProfileScreen = () => {
+        navigation.navigate('Profile');
     };
 
     return (<View style={styles.container}>
         <View style={styles.buttonRow}>
-            <Button title="Codes" style={styles.button} onPress={goToOtherScreen}/>
-            <Button title="Click Me" style={styles.button} />
+            <Button title="Codes" style={styles.button} onPress={goToCodesScreen}/>
+            <Button title="Profile" style={styles.button} onPress={goToProfileScreen}/>
         </View>
         <View style={styles.buttonRow}>
             <Button title="Click Me" style={styles.button} />
