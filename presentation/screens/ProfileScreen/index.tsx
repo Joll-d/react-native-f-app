@@ -3,6 +3,7 @@ import {Image, View, Text} from 'react-native';
 import { styles } from "./styles";
 import Row from "../../containers/Row";
 import Field from "../../components/Field";
+import DropdownList from "../../components/DropdownList";
 
 
 const ProfileScreen: React.FC = () => {
@@ -22,7 +23,13 @@ const ProfileScreen: React.FC = () => {
 
                 <Field label={'Number'} value={'0954872546'}></Field>
 
+                <DropdownList>
+                    <Field label={'Name'} value={'Sem Santi'}></Field>
 
+                    <Field label={'Email'} value={'example@email.com'}></Field>
+
+                    <Field label={'Number'} value={'0954872546'}></Field>
+                </DropdownList>
 
                 {/* Добавьте другие поля профиля здесь */}
             </View>
