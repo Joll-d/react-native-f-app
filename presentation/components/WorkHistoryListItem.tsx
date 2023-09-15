@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
-import {View, Button, FlatList, Text, StyleSheet} from 'react-native';
-import {Divider} from "@react-native-material/core";
+import React from 'react';
+import {StyleSheet, Text, View} from 'react-native';
 import Row from "../containers/Row";
 
 interface DropdownListProps {

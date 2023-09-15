@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import {View, Text, Button, TextInput} from 'react-native';
+import React, {useState} from 'react';
+import {Button, Text, TextInput, View} from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 // import Barcode from 'react-native-barcode-builder';
 

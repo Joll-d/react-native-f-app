@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
-import { View, TouchableOpacity, Text, StyleSheet } from 'react-native';
-import { Button } from "@react-native-material/core";
-import { styles } from "./styles";
-import { useNavigation } from '@react-navigation/native';
+import React from 'react';
+import {View} from 'react-native';
+import {Button} from "@react-native-material/core";
+import {styles} from "./styles";
+import {useNavigation} from '@react-navigation/native';
 import {RootStackParamList} from "../../../Navigation/types";
-import { StackNavigationProp } from '@react-navigation/stack';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
 

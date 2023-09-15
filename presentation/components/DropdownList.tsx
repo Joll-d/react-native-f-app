@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import { View, Button, FlatList, Text } from 'react-native';
-import { Divider } from "@react-native-material/core";
+import React, {useState} from 'react';
+import {Button, View} from 'react-native';
+import {Divider} from "@react-native-material/core";
 
 interface DropdownListProps {
     children: React.ReactNode[] | React.ReactNode;

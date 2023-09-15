@@ -1,7 +1,6 @@
 import React from 'react';
-import {Image, View, Text} from 'react-native';
+import {Image, View} from 'react-native';
 import styles from "./styles";
-import Row from "../../containers/Row";
 import Field from "../../components/Field";
 import DropdownList from "../../components/DropdownList";
 import WorkHistoryListItem from "../../components/WorkHistoryListItem";
