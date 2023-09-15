@@ -4,9 +4,10 @@ import {View, ViewStyle} from 'react-native';
 interface RowProps {
     height?: number | undefined;
     children?: React.ReactNode;
+    style?: ViewStyle;
 }
 
-const Row: React.FC<RowProps> = ({ height, children }) => {
+const Row: React.FC<RowProps> = ({ height, children, style }) => {
     const containerStyle = {
         width: '100%',
         height: height !== undefined ? height : '100%',
@@ -14,7 +15,7 @@ const Row: React.FC<RowProps> = ({ height, children }) => {
     } as ViewStyle;
 
     return (
-        <View style={[containerStyle]}>
+        <View style={[containerStyle, style]}>
             {children}
         </View>
     );
