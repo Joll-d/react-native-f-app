@@ -1,23 +1,8 @@
 import React, {useState} from 'react';
 import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
+import Barcode from "react-native-barcode-builder";
 // import Barcode from 'react-native-barcode-builder';
-
-const QRCodeScreen: React.FC = () => {
-    return (
-        <View>
-            <Text>This is the QRCode Screen</Text>
-        </View>
-    );
-};
-
-const BarcodeScreen: React.FC = () => {
-    return (
-        <View>
-            <Text>This is the Barcode Screen</Text>
-        </View>
-    );
-};
 
 const CodesScreen: React.FC = () => {
     const [activeScreen, setActiveScreen] = useState('QRCode');
@@ -41,7 +26,10 @@ const CodesScreen: React.FC = () => {
 
     const generateBarcode = () => {
         if (inputText) {
-            return <Text>Barcode</Text>
+            return (
+                <View style={styles.infoContainer}>
+                    <Barcode value="123456789999" format="CODE128" width={2} height={60} />
+                </View>)
         } else {
             return <Text>No input text for Barcode</Text>;
         }
