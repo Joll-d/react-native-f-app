@@ -6,7 +6,7 @@ interface FieldProps {
     value: string;
 }
 
-export const Field: React.FC<FieldProps> = ({label, value}) => {
+const Field: React.FC<FieldProps> = ({label, value}) => {
     return (
         <View>
             <Text style={styles.label}>{label}:</Text>

@@ -1,7 +1,7 @@
-import WorkHistoryRepository from '../../domain/repositories/WorkHistoryRepository';
+import IWorkHistoryRepository from '../../domain/repositories/IWorkHistoryRepository';
 import fakeDB from '../datasources/WorkHistoryFakeDatabase';
 
-class FakeWorkHistoryRepository implements WorkHistoryRepository {
+class FakeWorkHistoryRepository implements IWorkHistoryRepository {
     async getWorkHistory() {
         return fakeDB;
     }
