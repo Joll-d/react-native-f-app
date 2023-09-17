@@ -22,7 +22,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
       },
-      "package": "com.joll_d.AppTS",
+      "package": "com.joll.AppTS",
       "versionCode": 1
     },
     "web": {
