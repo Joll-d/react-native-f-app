@@ -3,7 +3,14 @@ import {StyleSheet, Text, View} from 'react-native';
 import Row from "../containers/Row";
 import IWorkHistoryItem from "../../domain/entities/IWorkHistoryItem";
 
-const WorkHistoryListItem: React.FC<IWorkHistoryItem> = ({companyName, position,
+interface WorkHistoryListProps {
+    companyName: string;
+    position: string;
+    startDate: Date;
+    endDate: Date;
+}
+
+const WorkHistoryListItem: React.FC<WorkHistoryListProps> = ({companyName, position,
                                                        startDate, endDate}) => {
     function formatDateToDdMmYyyy(date: Date): string {
         const day: string = String(date.getDate()).padStart(2, '0');

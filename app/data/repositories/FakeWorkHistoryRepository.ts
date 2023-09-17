@@ -8,14 +8,14 @@ class FakeWorkHistoryRepository implements IWorkHistoryRepository {
     }
 
     async createWorkHistory(item: IWorkHistoryItem) {
-        fakeDB.push(item); // Добавление новой записи в фейковую БД
+        fakeDB.push(item);
         return item;
     }
 
     async updateWorkHistory(item: IWorkHistoryItem) {
-        const index = fakeDB.findIndex((existingItem) => existingItem.id === item.id); // Замените id на уникальное поле, если таковое есть
+        const index = fakeDB.findIndex((existingItem) => existingItem.id === item.id);
         if (index !== -1) {
-            fakeDB[index] = item; // Обновление существующей записи в фейковой БД
+            fakeDB[index] = item;
             return item;
         } else {
             throw new Error('Запись истории работы не найдена.');
@@ -23,9 +23,9 @@ class FakeWorkHistoryRepository implements IWorkHistoryRepository {
     }
 
     async deleteWorkHistory(id: number) {
-        const index = fakeDB.findIndex((item) => item.id === id); // Замените id на уникальное поле, если таковое есть
+        const index = fakeDB.findIndex((item) => item.id === id);
         if (index !== -1) {
-            fakeDB.splice(index, 1); // Удаление записи из фейковой БД
+            fakeDB.splice(index, 1);
         } else {
             throw new Error('Запись истории работы не найдена.');
         }

@@ -1,6 +1,6 @@
-import { StyleSheet } from 'react-native';
+import {StyleSheet} from "react-native";
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 16,
@@ -24,12 +24,4 @@ const styles = StyleSheet.create({
         shadowRadius: 4,
         elevation: 4,
     },
-    button: {
-        borderRadius: 20,
-        padding: 10,
-        elevation: 2,
-    },
 });
-
-
-export default styles;

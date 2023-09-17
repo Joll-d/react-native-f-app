@@ -30,11 +30,6 @@ const HomeScreen: React.FC = () => {
         </View>
         <View style={styles.buttonRow}>
             <Button title="Modal Windows" style={styles.button} onPress={goToTestModalWindowsScreen}/>
-            <Button title="Click Me" style={styles.button} />
-        </View>
-        <View style={styles.buttonRow}>
-            <Button title="Click Me" style={styles.button} />
-            <Button title="Click Me" style={styles.button} />
         </View>
     </View>);
 }

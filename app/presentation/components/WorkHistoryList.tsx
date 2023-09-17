@@ -1,8 +1,14 @@
 import React from 'react';
 import WorkHistoryListItem from './WorkHistoryListItem';
-import IWorkHistoryItem from "../../domain/entities/IWorkHistoryItem";
 
-const WorkHistoryList: React.FC<{workHistory: IWorkHistoryItem[]; }> = ({workHistory}) => {
+interface WorkHistoryListProps {
+    companyName: string;
+    position: string;
+    startDate: Date;
+    endDate: Date;
+}
+
+const WorkHistoryList: React.FC<{workHistory: WorkHistoryListProps[]; }> = ({workHistory}) => {
     return (
         <>
             {workHistory.map((item, index) => (

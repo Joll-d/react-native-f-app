@@ -2,7 +2,7 @@ import IWorkHistoryRepository from '../repositories/IWorkHistoryRepository';
 import FakeWorkHistoryRepository from "../../data/repositories/FakeWorkHistoryRepository";
 import IWorkHistoryItem from "../entities/IWorkHistoryItem";
 
-const workHistoryRepository: IWorkHistoryRepository = new FakeWorkHistoryRepository();
+const workHistoryRepository = new FakeWorkHistoryRepository();
 
 const loadWorkHistory = async (): Promise<IWorkHistoryItem[]> => {
     return workHistoryRepository.getWorkHistory();
