@@ -1,4 +1,5 @@
 interface IWorkHistoryItem {
+    id: number;
     companyName: string;
     position: string;
     startDate: Date;

@@ -19,13 +19,17 @@ const HomeScreen: React.FC = () => {
         navigation.navigate('Profile');
     };
 
+    const goToTestModalWindowsScreen = () => {
+        navigation.navigate('TestModalWindows');
+    };
+
     return (<View style={styles.container}>
         <View style={styles.buttonRow}>
             <Button title="Codes" style={styles.button} onPress={goToCodesScreen}/>
             <Button title="Profile" style={styles.button} onPress={goToProfileScreen}/>
         </View>
         <View style={styles.buttonRow}>
-            <Button title="Click Me" style={styles.button} />
+            <Button title="Modal Windows" style={styles.button} onPress={goToTestModalWindowsScreen}/>
             <Button title="Click Me" style={styles.button} />
         </View>
         <View style={styles.buttonRow}>

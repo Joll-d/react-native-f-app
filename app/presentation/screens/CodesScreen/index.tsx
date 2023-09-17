@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import {Button, StyleSheet, Text, TextInput, View} from 'react-native';
 import QRCode from 'react-native-qrcode-svg';
 import Barcode from "react-native-barcode-builder";
-// import Barcode from 'react-native-barcode-builder';
 
 const CodesScreen: React.FC = () => {
     const [activeScreen, setActiveScreen] = useState('QRCode');
@@ -16,7 +15,7 @@ const CodesScreen: React.FC = () => {
         if (inputText) {
             return (
                 <View style={styles.infoContainer}>
-                    <QRCode value={inputText} size={200} />
+                    <QRCode value='123456789999' size={200} />
                 </View>
             );
         } else {
@@ -38,15 +37,15 @@ const CodesScreen: React.FC = () => {
     return (
         <View>
             <Button title="Toggle Screen" onPress={toggleScreen} />
-            <View>
+            <View style={[{backgroundColor: "white"}, {margin: 10}]}>
                 <Text>Enter Text:</Text>
                 <TextInput
                     style={{ borderWidth: 1, borderColor: 'gray', marginBottom: 10 }}
                     onChangeText={(text) => setInputText(text)}
                     value={inputText}
                 />
-                {activeScreen === 'QRCode' && generateQRCode()}
-                {activeScreen === 'Barcode' && generateBarcode()}
+                {activeScreen === 'QRCode' && (<QRCode value="123456789999" size={200} />)}
+                {activeScreen === 'Barcode' && (<Barcode value="123456789999" format="CODE128" width={2} height={60}/>)}
             </View>
         </View>
     );
